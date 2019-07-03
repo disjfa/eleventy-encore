@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        <a class="navbar-brand" href="{{ '/' | url }}">
+            eleventy-encore
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-navbar">
+            <ul class="navbar-nav mr-auto">
+                {%- for p in collections.page -%}
+                    <li class="nav-item{% if p.url === page.url %} active{% endif %}">
+                        <a class="nav-link" href="{{ p.url | url }}">
+                            {{ p.data.title }}
+                            {%- if p.url === page.url %} <span class="sr-only">(current)</span>{% endif -%}
+                        </a>
+                    </li>
+                {%- endfor -%}
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/disjfa/eleventy-encore">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {%- for css in encore.app.css -%}
+        <link rel="stylesheet" href="{{ css }}" type="text/css">
+    {%- endfor -%}
+    <title>{{ title }}</title>
+<body>
+{% include 'components/navbar.njk' %}
+{{ content | safe }}
+<br>
+<footer class="bg-light">
+    <div class="container py-3">
+        <div class="row">
+            <div class="col">
+                <ul>
+                    <li>
+                        <a href="https://symfony.com/doc/current/frontend.html">
+                            <i class="fa fa-circle"></i>
+                            Webpack encore
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://fontawesome.com/">
+                            <i class="fab fa-font-awesome"></i>
+                            Font Awesome
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://unsplash.com/">
+                            <i class="fa fa-circle"></i>
+                            Unsplash
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://getbootstrap.com/">
+                            <i class="fab fa-bootstrap"></i>
+                            Bootstrap
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+{%- for js in encore.app.js -%}
+    <script src="{{ js }}"></script>
+{%- endfor -%}
+</body>
+</html>
