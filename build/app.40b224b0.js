@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([["app"],{dHOs:function(o,n,s){"use strict";s.r(n);s("gRZq");console.log("hello world")},gRZq:function(o,n,s){}},[["dHOs","runtime"]]]);
