@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><link rel="stylesheet" href="/eleventy-encore/build/app.6f39f60c.css" type="text/css"><title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><link rel="stylesheet" href="/eleventy-encore/build/app.6f39f60c.css" type="text/css"><title>Deploying</title>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container">
@@ -19,12 +19,12 @@
                     </li><li class="nav-item">
                         <a class="nav-link" href="/eleventy-encore/pages/2.developing/">
                             Developing</a>
-                    </li><li class="nav-item">
-                        <a class="nav-link" href="/eleventy-encore/pages/3.deploying/">
-                            Deploying</a>
                     </li><li class="nav-item active">
+                        <a class="nav-link" href="/eleventy-encore/pages/3.deploying/">
+                            Deploying <span class="sr-only">(current)</span></a>
+                    </li><li class="nav-item">
                         <a class="nav-link" href="/eleventy-encore/">
-                            Home <span class="sr-only">(current)</span></a>
+                            Home</a>
                     </li></ul>
             <ul class="navbar-nav">
                 <li class="nav-item">
@@ -38,15 +38,14 @@
 </nav>
 
 
-
 <div class="bg-light">
     <div class="container">
         <figure class="py-4">
-            <img src="https://images.unsplash.com/photo-1562089501-5215229b367a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1200&h=500&q=80" alt="" class="img-fluid rounded">
+            <img src="https://images.unsplash.com/photo-1562091200-7b242fa07e50?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1200&h=300&q=80" alt="" class="img-fluid rounded">
             <figcaption>
                 Photo by
-                <a href="https://unsplash.com/@m_maaris?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
-                    Marek Szturc
+                <a href="https://unsplash.com/@triconautes?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+                    Les Triconautes
                 </a> on
                 <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
             </figcaption>
@@ -54,42 +53,17 @@
     </div>
 </div>
 <div class="container">
-    <h1>11ty using webpack encore</h1>
-    <p>
-        A quick introduction, there is a static site generator called <a href="https://www.11ty.io">11ty</a>. They seem
-        cool and have a cool mascot so we have to implement that!
-    </p>
-    <p>
-        Next up i am fond of <a href="https://symfony.com/doc/current/frontend.html">webpack encore</a>. Easy build
-        using webpack.
-    </p>
-
-    <h3>Next up</h3>
-
-    <p>
-        Next, we are gonna check what we can do! This should be awesome.
-    </p>
-
-    <ol>
-                <li>
-                    <a href="/eleventy-encore/pages/1.setup/">
-                        Setup
-                    </a>
-                </li>
-            
-                <li>
-                    <a href="/eleventy-encore/pages/2.developing/">
-                        Developing
-                    </a>
-                </li>
-            
-                <li>
-                    <a href="/eleventy-encore/pages/3.deploying/">
-                        Deploying
-                    </a>
-                </li>
-            </ol>
-
+<h1>Deploying</h1>
+<p>Ok, looks nice. Now we have to deploy.</p>
+<p>We can deploy using github pages, netlify, ftp, #yolo. What we want, for now i will make an easy setup using <a href="https://www.npmjs.com/package/gh-pages">gh-pages</a>. Just for ease of use and i have the example there as it is. So install that.</p>
+<pre class="language-bash"><code class="language-bash"><span class="highlight-line"><span class="token function">npm</span> <span class="token function">install</span> gh-pages</span></code></pre>
+<h3>Script</h3>
+<p>Dig into the npm script again. Add some more to build the css and javascript. Build the 11ty files and deploy this to github pages.</p>
+<pre class="language-json"><code class="language-json"><span class="highlight-line"><span class="token punctuation">{</span></span><br><span class="highlight-line">  <span class="token property">"scripts"</span><span class="token operator">:</span> <span class="token punctuation">{</span></span><br><span class="highlight-line">    <span class="token property">"prod:eleventy"</span><span class="token operator">:</span> <span class="token string">"ELEVENTY_ENV=production eleventy"</span><span class="token punctuation">,</span></span><br><span class="highlight-line">    <span class="token property">"prod:encore"</span><span class="token operator">:</span> <span class="token string">"encore production"</span><span class="token punctuation">,</span></span><br><span class="highlight-line">    <span class="token property">"deploy"</span><span class="token operator">:</span> <span class="token string">"npm-run-all prod:encore prod:eleventy gh-pages"</span><span class="token punctuation">,</span></span><br><span class="highlight-line">    <span class="token property">"gh-pages"</span><span class="token operator">:</span> <span class="token string">"gh-pages -d dist"</span></span><br><span class="highlight-line">  <span class="token punctuation">}</span></span><br><span class="highlight-line"><span class="token punctuation">}</span></span></code></pre>
+<p>Aaaaaaand done again. We developed a nice demo. Now we can just sit back and enjoy! Run the deploy command after we setup the repository to github.</p>
+<pre class="language-bash"><code class="language-bash"><span class="highlight-line"><span class="token function">npm</span> run deploy</span></code></pre>
+<p>It builds all the scripts. Adds versioning to css/js files. Builds the files and deploys all the files to your local gh-pages branch on github for github pages.</p>
+<p>Nice.</p>
 </div>
 
 <br>
