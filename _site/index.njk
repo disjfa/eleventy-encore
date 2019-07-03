@@ -29,4 +29,22 @@ tags: [page]
         using webpack.
     </p>
 
+    <h3>Next up</h3>
+
+    <p>
+        Next, we are gonna check what we can do! This should be awesome.
+    </p>
+
+    <ol>
+        {%- for p in collections.page -%}
+            {% if p.url !== page.url %}
+                <li>
+                    <a href="{{ p.url | url }}">
+                        {{ p.data.title }}
+                    </a>
+                </li>
+            {% endif %}
+        {%- endfor -%}
+    </ol>
+
 </div>
