@@ -1,0 +1,28 @@
+{
+  "projectName": "eleventy-encore",
+  "projectOwner": "disjfa",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "commitConvention": "none",
+  "contributors": [
+    {
+      "login": "disjfa",
+      "name": "disjfa",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/632778?v=4",
+      "profile": "http://www.disjfa.nl",
+      "contributions": [
+        "question",
+        "blog",
+        "code",
+        "doc",
+        "example"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7
+}
