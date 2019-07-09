@@ -75,6 +75,3 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 [github-star]: https://github.com/disjfa/eleventy-encore/stargazers
 [twitter]: https://twitter.com/intent/tweet?text=Check%20out%20eleventy-encore!%20-%20Cool%11ty%20starter%20template!%20Thanks%20@disjfa%20https://github.com/disjfa/eleventy-encore%20%F0%9F%A4%97
 [twitter-badge]: https://img.shields.io/twitter/url/https/github.com/disjfa/eleventy-encore.svg?style=social
-
-
-
