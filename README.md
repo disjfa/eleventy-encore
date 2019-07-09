@@ -68,7 +68,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
 
 [license]: https://github.com/disjfa/eleventy-encore/blob/master/LICENSE
-[license-badge]: https://img.shields.io/npm/l/eleventy-encore.svg?style=flat-square
+[license-badge]: https://img.shields.io/github/license/disjfa/eleventy-encore.svg
 [github-watch-badge]: https://img.shields.io/github/watchers/disjfa/eleventy-encore.svg?style=social
 [github-watch]: https://github.com/disjfa/eleventy-encore/watchers
 [github-star-badge]: https://img.shields.io/github/stars/disjfa/eleventy-encore.svg?style=social
