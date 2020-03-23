@@ -3,7 +3,7 @@
     "app": {
       "js": [
         "/eleventy-encore/build/runtime.eb292fcb.js",
-        "/eleventy-encore/build/app.ce86ef0f.js"
+        "/eleventy-encore/build/app.458ce293.js"
       ],
       "css": [
         "/eleventy-encore/build/app.e7597678.css"
