@@ -7,6 +7,11 @@
         <link rel="stylesheet" href="{{ css }}" type="text/css">
     {%- endfor -%}
     <title>{{ title }}</title>
+    <meta property="og:title" content="{{ title }} - 11ty encore">
+    <meta property="og:description" content="A starter projects for 11ty using webpack encore">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://disjfa.github.io{{ page.url | url }}">
+    <meta property="og:image" content="https://disjfa.github.io/img/social.jpg">
 <body>
 {% include 'components/navbar.njk' %}
 {{ content | safe }}
@@ -31,6 +36,10 @@
                 <a class="nav-link" href="https://github.com/disjfa/eleventy-encore">
                     <i class="fab fa-github"></i>
                     Check the source on github
+                </a>
+                <h5>Share?</h5>
+                <a href="#" class="js-share nav-link" data-title="11ty encore" data-text="A starter projects for 11ty using webpack encore">
+                    <i class="fa fa-share-alt"></i> share
                 </a>
             </div>
             <div class="col-12 col-md">
@@ -65,6 +74,8 @@
                             <i class="fab fa-bootstrap"></i>
                             Bootstrap
                         </a>
+                    </li>
+                    <li>
                     </li>
                 </ul>
             </div>
