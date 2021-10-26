@@ -8,7 +8,6 @@ Encore
   .enableSingleRuntimeChunk()
   .enableSourceMaps(!Encore.isProduction())
   .enableSassLoader()
-  .autoProvidejQuery()
 ;
 
 if (Encore.isProduction()) {

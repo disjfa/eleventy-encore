@@ -3,14 +3,14 @@
         <a class="navbar-brand" href="{{ '/' | url }}">
             eleventy-encore
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="main-navbar">
-            <ul class="navbar-nav mr-auto">
+            <ul class="navbar-nav me-auto">
                 {%- for p in collections.nav -%}
-                    <li class="nav-item{% if p.url === page.url %} active{% endif %}">
-                        <a class="nav-link" href="{{ p.url | url }}">
+                    <li class="nav-item">
+                        <a class="nav-link{% if p.url === page.url %} active{% endif %}" href="{{ p.url | url }}">
                             {{ p.data.title }}
                             {%- if p.url === page.url %} <span class="sr-only">(current)</span>{% endif -%}
                         </a>
@@ -27,4 +27,3 @@
         </div>
     </div>
 </nav>
-
